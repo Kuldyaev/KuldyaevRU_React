@@ -1,0 +1,30 @@
+.footer{
+    height:10%;
+    width: 100%;
+    display: flex;
+}
+.icon {
+    animation: icons-spin 1 2s linear;
+    height:20px;
+    width: 20px;
+    margin-left: 5px;
+}
+@keyframes icons-spin {
+  from {
+    transform: scale(1, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.social{
+    height:100%;
+    width: 50%;
+    text-align: center;
+    margin-top: 4%;
+}
+.rights{
+    height:100%;
+    width: 50%;
+    text-align: center;
+}
