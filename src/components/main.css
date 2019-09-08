@@ -1,0 +1,8 @@
+.main{
+    width: 100%;
+    height: 80%;
+    background-color: grey;
+}
+p, h4, h3{
+    margin: 0;
+}
