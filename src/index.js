@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider} from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import reducer from './reducers/reducer';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -8,8 +14,15 @@ import * as serviceWorker from './serviceWorker';
 
 
 
+let store = createStore(reducer,  composeWithDevTools(applyMiddleware(thunk)))
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store= {store}>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    </Provider>
+        , document.getElementById('root'));
 
 
 

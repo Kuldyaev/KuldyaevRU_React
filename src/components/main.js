@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import Slider from './slider'
 import './main.css'
 
+import {Link, withRouter } from 'react-router-dom'
+import {connect} from 'react-redux'
+
+
+
+
 class Main extends Component{
     render(){
-        var width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
 
-        var height = window.innerHeight
-        || document.documentElement.clientHeight
-        || document.body.clientHeight;
         
         return(
         <div className='main'>
@@ -33,6 +33,7 @@ class Main extends Component{
                   <p>  чтобы в ближайшее время сделать этот раздел сайта удобным и полезным.</p>
                   <p>с уважением,</p>
                   <p>Кульдяев Вячеслав</p>
+                  <p>{String(this.props.status.width)}</p>
               </div>
         </div>
        
@@ -40,5 +41,4 @@ class Main extends Component{
 }}
 
 
-
-export default (Main)
+export default withRouter(connect(state=>({status: state.status}))(Main))

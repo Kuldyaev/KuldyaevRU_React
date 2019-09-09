@@ -1,20 +1,53 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import {connect} from 'react-redux'
+
 import './App.css';
 import Header from './components/header'
 import Main from './components/main'
 import Footer from './components/footer'
 import MyUdacity from './components/udacity'
 
+import {changeMeasuring} from './actions/status'
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Main/>
-      <MyUdacity/>
-      <Footer/>
-    </div>
-  );
+class  App  extends Component {
+    constructor(props){
+		super(props);
+		this.state={
+			loading : 'true',
+         };
+    }     
+    
+    componentDidMount() {
+        var width = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+        var height = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+            
+        this.props.changeMeasuring(1500, 2000)
+    }
+    
+    render(){   
+          return (
+            <div className="App">
+              <Header/>
+              <Main/>
+              <MyUdacity/>
+              <Footer/>
+            </div>
+          );
+    }
 }
 
-export default App;
+function mapStateToProps (store){
+    return{
+      store: store,
+      status: store.status
+    };
+}
+
+	
+export default withRouter(connect(mapStateToProps, {changeMeasuring})(App));
