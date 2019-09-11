@@ -16,7 +16,6 @@ class Header extends Component{
                 <p id='Lang'>Russian</p>
             </div>
         </div>
-       
         )
 }}
 

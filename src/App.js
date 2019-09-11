@@ -27,7 +27,7 @@ class  App  extends Component {
             || document.documentElement.clientHeight
             || document.body.clientHeight;
             
-        this.props.changeMeasuring(1500, 2000)
+        this.props.changeMeasuring(height, width)
     }
     
     render(){   

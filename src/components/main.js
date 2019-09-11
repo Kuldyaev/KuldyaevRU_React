@@ -33,7 +33,6 @@ class Main extends Component{
                   <p>  чтобы в ближайшее время сделать этот раздел сайта удобным и полезным.</p>
                   <p>с уважением,</p>
                   <p>Кульдяев Вячеслав</p>
-                  <p>{String(this.props.status.width)}</p>
               </div>
         </div>
        
