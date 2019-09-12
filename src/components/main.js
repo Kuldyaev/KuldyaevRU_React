@@ -10,11 +10,12 @@ import {connect} from 'react-redux'
 
 class Main extends Component{
     render(){
-
+    const heightSlider = Math.round(this.props.status.width*0.75*0.9)
+    const widthSlider = Math.round(this.props.status.width*0.9)
         
         return(
         <div className='main'>
-            <div className='mainslider'>
+            <div className='mainslider' style={{'width': widthSlider, 'height': heightSlider}}>
                 <Slider/>
             </div>
             <div className='mainmessage'>
