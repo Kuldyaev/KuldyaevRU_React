@@ -5,7 +5,8 @@ const status = (state = {}, action) => {
     case CHANGE_MEASURING:
       return { 
           'width' : action.width,
-          'height': action.height
+          'height': action.height,
+          'scale': action.scale,
       }
     default:
       return state

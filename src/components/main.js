@@ -1,43 +1,105 @@
 import React, { Component } from 'react'
-import Slider from './slider'
 import './main.css'
-
+import { Slide } from 'react-slideshow-image';
 import {Link, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
-
-
+import Text1 from './slider'
+const slideImages = [
+  './img/slider/image2.jpg',
+  './img/slider/image3.jpg',
+  './img/slider/image4.jpg',
+  './img/slider/image5.jpg',
+];
+ 
+const properties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  arrows: true,
+  onChange: (oldIndex, newIndex) => {
+    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+  }
+}
 
 
 class Main extends Component{
+    constructor(props){
+		super(props);
+		this.state={
+			 scale: 0.7 ,
+        }
+    } 
+    
+    componentDidMount(){
+        if (this.props.status.width){
+            this.setState({
+                scale: 1,
+            })
+        }
+    }
+    
     render(){
-    const heightSlider = Math.round(this.props.status.width*0.75*0.9)
-    const widthSlider = Math.round(this.props.status.width*0.9)
-        
+         
+    const heightSlider = Math.round(this.props.status.width*0.66683071*this.props.status.scale)
+    const widthSlider = Math.round(this.props.status.width*this.props.status.scale)
+    
+    
+    if (this.props.status.scale<1){
         return(
-        <div className='main'>
-            <div className='mainslider' style={{'width': widthSlider, 'height': heightSlider}}>
-                <Slider/>
+            <div className='main' style={{'display': 'flex'}}>
+                <Text1  style={{'width': '30%', 'height': (heightSlider + 20)}}/>
+                <div className='mainslider' style={{'width': widthSlider, 'height': (heightSlider + 20)}}>
+                    <Slide {...properties} className="slider-container" style={{'width': widthSlider, 'height': heightSlider}}>
+                      <div className="each-slide" style={{'width': widthSlider, 'height': heightSlider}}>
+                        <div style={{'backgroundImage': `url(${slideImages[0]})`, 'height': heightSlider}}>
+                        </div>
+                      </div>
+                      <div className="each-slide" style={{'width': widthSlider}}>
+                        <div style={{'backgroundImage': `url(${slideImages[1]})`, 'height': heightSlider}}>
+                        </div>
+                      </div>
+                      <div className="each-slide" style={{'width': widthSlider}}>
+                        <div style={{'backgroundImage': `url(${slideImages[2]})`, 'height': heightSlider}}>
+                        </div>
+                      </div>
+                      <div className="each-slide" style={{'width': widthSlider}}>
+                        <div style={{'backgroundImage': `url(${slideImages[3]})`, 'height': heightSlider}}>
+                        </div>
+                      </div>
+                    </Slide>
+                </div>
             </div>
-            <div className='mainmessage'>
-                <h3> Всем привет!</h3>
-                 <p>Меня зовут Вячеслав и это мой персональный сайт.</p>
-                 <p>Здесь планирую разместить информацию о себе и своих проектах.</p>
-                 <p>В настоящее время нахожусь в США, где повышаю уровень знания английского и
-                    параллельно решил познакомиться с языком компьютеров.</p>
-                 <p>Результатом последнего увлечения и стал этот сайт.</p>
-                 <p>Надеюсь, что этот проект станет информативным для тех, кому нужна информация о моей скромной персоне.</p>
-
-
-
-
-                  <p> Пока работает не все, НО cейчас я работаю над тем,</p>
-                  <p>  чтобы в ближайшее время сделать этот раздел сайта удобным и полезным.</p>
-                  <p>с уважением,</p>
-                  <p>Кульдяев Вячеслав</p>
-              </div>
-        </div>
-       
         )
+    }
+    else{
+            
+    return(
+        <div className='main'>
+            <div className='mainslider' style={{'width': widthSlider, 'height': (heightSlider + 20)}}>
+                <Slide {...properties} className="slider-container" style={{'width': widthSlider, 'height': heightSlider}}>
+                  <div className="each-slide" style={{'width': widthSlider, 'height': heightSlider}}>
+                    <div style={{'backgroundImage': `url(${slideImages[0]})`, 'height': heightSlider}}>
+                    </div>
+                  </div>
+                  <div className="each-slide" style={{'width': widthSlider}}>
+                    <div style={{'backgroundImage': `url(${slideImages[1]})`, 'height': heightSlider}}>
+                    </div>
+                  </div>
+                  <div className="each-slide" style={{'width': widthSlider}}>
+                    <div style={{'backgroundImage': `url(${slideImages[2]})`, 'height': heightSlider}}>
+                    </div>
+                  </div>
+                  <div className="each-slide" style={{'width': widthSlider}}>
+                    <div style={{'backgroundImage': `url(${slideImages[3]})`, 'height': heightSlider}}>
+                    </div>
+                  </div>
+                </Slide>
+            </div>
+            <Text1/>
+        </div>
+        )
+    }
 }}
 
 

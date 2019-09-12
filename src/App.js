@@ -26,8 +26,11 @@ class  App  extends Component {
         var height = window.innerHeight
             || document.documentElement.clientHeight
             || document.body.clientHeight;
-            
-        this.props.changeMeasuring(height, width)
+        
+        var scale = 0.7
+        if(width < 1024){scale = 1}
+        
+        this.props.changeMeasuring(width, height, scale)
     }
     
     render(){   
