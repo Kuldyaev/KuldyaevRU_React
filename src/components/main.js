@@ -5,6 +5,8 @@ import {Link, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import MyUdacity from './udacity'
 import Text1 from './slider'
+import Fotos from './fotos'
+import Hobby from './hobby'
 const slideImages = [
   './img/slider/image2.jpg',
   './img/slider/image3.jpg',
@@ -48,8 +50,8 @@ class Main extends Component{
     
     if (this.props.status.scale<1){
         return(
-            <div className='main' >
-                <div className='main1blok' style={{'display': 'flex'}}>
+            <div className='main'>
+                <div className='main1blok'>
                     <Text1  style={{'width': '30%', 'height': (heightSlider + 20)}}/>
                     <div className='mainslider' style={{'width': widthSlider, 'height': (heightSlider + 20)}}>
                         <Slide {...properties} className="slider-container" style={{'width': widthSlider, 'height': heightSlider}}>
@@ -73,6 +75,8 @@ class Main extends Component{
                     </div>
                 </div>
                 <MyUdacity/>
+                <Fotos/>
+                <Hobby/>
             </div>
         )
     }
@@ -102,6 +106,8 @@ class Main extends Component{
             </div>
             <Text1/>
             <MyUdacity/>
+            <Fotos/>
+            <Hobby/>
         </div>
         )
     }

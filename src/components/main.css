@@ -1,15 +1,30 @@
 .main{
     width: 100%;
-    height: 93%;
+    height: 393%;
     background-color: grey;
 }
 p, h4, h3{
     margin: 0;
 }
+.main1blok{
+    width: 100%;
+    height: 24%;
+    display: flex;
+}
 .udacity{
     width: 100%;
-    height: 100%;
+    height: 25%;
     background-color: blue;
+}
+.fotos{
+    width: 100%;
+    height: 25%;
+    background-color: red; 
+}
+.hobby{
+    width: 100%;
+    height: 25%;
+    background-color: yellow; 
 }
 
 .slide-container {
