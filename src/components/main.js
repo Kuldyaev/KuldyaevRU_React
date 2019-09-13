@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import './main.css'
+import React, { Component } from 'react';
+import './main.css';
 import { Slide } from 'react-slideshow-image';
-import {Link, withRouter } from 'react-router-dom'
+import {Link, withRouter } from 'react-router-dom';
+import { ScrollTo, ScrollArea } from "react-scroll-to";
 import {connect} from 'react-redux'
 import MyUdacity from './udacity'
 import Text1 from './slider'
 import Fotos from './fotos'
 import Hobby from './hobby'
+
 const slideImages = [
   './img/slider/image2.jpg',
   './img/slider/image3.jpg',
@@ -20,9 +22,6 @@ const properties = {
   infinite: true,
   indicators: true,
   arrows: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  }
 }
 
 
@@ -30,23 +29,41 @@ class Main extends Component{
     constructor(props){
 		super(props);
 		this.state={
-			 scale: 0.7 ,
+			visibilityTopPageArrow: 'hidden',
         }
+        this.handleScroll = this.handleScroll.bind(this);
     } 
     
     componentDidMount(){
-        if (this.props.status.width){
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    
+    componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    }
+    
+    handleScroll(e) {
+        console.log('scroll event');
+        console.log(e);
+        console.log(window.scrollY);
+        if (window.scrollY> this.props.status.height){
+            console.log(window.scrollY);
             this.setState({
-                scale: 1,
+                visibilityTopPageArrow: 'visible',
             })
         }
-    }
+        else {
+            this.setState({
+                visibilityTopPageArrow: 'hidden',
+            })
+        }
+    }   
     
     render(){
          
     const heightSlider = Math.round(this.props.status.width*0.66683071*this.props.status.scale)
     const widthSlider = Math.round(this.props.status.width*this.props.status.scale)
-    
+    var y = window.scrollY
     
     if (this.props.status.scale<1){
         return(
@@ -77,6 +94,14 @@ class Main extends Component{
                 <MyUdacity/>
                 <Fotos/>
                 <Hobby/>
+                <ScrollTo>
+                    {({ scrollTo }) => (
+                        <a id='scrollBottom' style={{'visibility': this.state.visibilityTopPageArrow}}
+                        onClick={() => scrollTo({ x: 0, y: 0 })}>
+                            /\ Начало страницы /\
+                        </a>
+                        )}
+                </ScrollTo>
             </div>
         )
     }
