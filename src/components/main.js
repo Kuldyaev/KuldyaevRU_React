@@ -3,6 +3,7 @@ import './main.css'
 import { Slide } from 'react-slideshow-image';
 import {Link, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
+import MyUdacity from './udacity'
 import Text1 from './slider'
 const slideImages = [
   './img/slider/image2.jpg',
@@ -47,28 +48,31 @@ class Main extends Component{
     
     if (this.props.status.scale<1){
         return(
-            <div className='main' style={{'display': 'flex'}}>
-                <Text1  style={{'width': '30%', 'height': (heightSlider + 20)}}/>
-                <div className='mainslider' style={{'width': widthSlider, 'height': (heightSlider + 20)}}>
-                    <Slide {...properties} className="slider-container" style={{'width': widthSlider, 'height': heightSlider}}>
-                      <div className="each-slide" style={{'width': widthSlider, 'height': heightSlider}}>
-                        <div style={{'backgroundImage': `url(${slideImages[0]})`, 'height': heightSlider}}>
-                        </div>
-                      </div>
-                      <div className="each-slide" style={{'width': widthSlider}}>
-                        <div style={{'backgroundImage': `url(${slideImages[1]})`, 'height': heightSlider}}>
-                        </div>
-                      </div>
-                      <div className="each-slide" style={{'width': widthSlider}}>
-                        <div style={{'backgroundImage': `url(${slideImages[2]})`, 'height': heightSlider}}>
-                        </div>
-                      </div>
-                      <div className="each-slide" style={{'width': widthSlider}}>
-                        <div style={{'backgroundImage': `url(${slideImages[3]})`, 'height': heightSlider}}>
-                        </div>
-                      </div>
-                    </Slide>
+            <div className='main' >
+                <div className='main1blok' style={{'display': 'flex'}}>
+                    <Text1  style={{'width': '30%', 'height': (heightSlider + 20)}}/>
+                    <div className='mainslider' style={{'width': widthSlider, 'height': (heightSlider + 20)}}>
+                        <Slide {...properties} className="slider-container" style={{'width': widthSlider, 'height': heightSlider}}>
+                          <div className="each-slide" style={{'width': widthSlider, 'height': heightSlider}}>
+                            <div style={{'backgroundImage': `url(${slideImages[0]})`, 'height': heightSlider}}>
+                            </div>
+                          </div>
+                          <div className="each-slide" style={{'width': widthSlider}}>
+                            <div style={{'backgroundImage': `url(${slideImages[1]})`, 'height': heightSlider}}>
+                            </div>
+                          </div>
+                          <div className="each-slide" style={{'width': widthSlider}}>
+                            <div style={{'backgroundImage': `url(${slideImages[2]})`, 'height': heightSlider}}>
+                            </div>
+                          </div>
+                          <div className="each-slide" style={{'width': widthSlider}}>
+                            <div style={{'backgroundImage': `url(${slideImages[3]})`, 'height': heightSlider}}>
+                            </div>
+                          </div>
+                        </Slide>
+                    </div>
                 </div>
+                <MyUdacity/>
             </div>
         )
     }
@@ -97,6 +101,7 @@ class Main extends Component{
                 </Slide>
             </div>
             <Text1/>
+            <MyUdacity/>
         </div>
         )
     }

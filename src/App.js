@@ -5,9 +5,8 @@ import {connect} from 'react-redux'
 import './App.css';
 import Header from './components/header'
 import Main from './components/main'
+import NotFound from './components/notfound'
 import Footer from './components/footer'
-import MyUdacity from './components/udacity'
-
 import {changeMeasuring} from './actions/status'
 
 class  App  extends Component {
@@ -37,8 +36,11 @@ class  App  extends Component {
           return (
             <div className="App">
               <Header/>
-              <Main/>
-              <MyUdacity/>
+              <Switch>
+                        <Route exact path='/' component = {Main}/>
+
+                        <Route component={NotFound} />
+              </Switch>
               <Footer/>
             </div>
           );
