@@ -7,6 +7,8 @@ import Header from './components/header'
 import Main from './components/main'
 import NotFound from './components/notfound'
 import Footer from './components/footer'
+import Udacity1 from './components/udacity1'
+
 import {changeMeasuring} from './actions/status'
 
 class  App  extends Component {
@@ -38,6 +40,7 @@ class  App  extends Component {
               <Header/>
               <Switch>
                         <Route exact path='/' component = {Main}/>
+                        <Route exact path='/udacity' component = {Udacity1}/>
 
                         <Route component={NotFound} />
               </Switch>
