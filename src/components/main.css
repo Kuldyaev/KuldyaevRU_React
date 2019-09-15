@@ -99,8 +99,9 @@ h3 {
 .udasert{
     width: 40%;
     height: 35%;
-     background-size: cover;
-     margin-left: 10%;
+    background-size: cover;
+    margin-left: 10%;
+    border-radius: 5%; 
 }
 #sert1{
     background-image: url('./img/sertUda2.JPG');  
