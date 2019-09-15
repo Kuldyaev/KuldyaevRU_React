@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link, withRouter } from 'react-router-dom';
+import {connect} from 'react-redux'
 import './main.css'
 
 class MyUdacity extends Component{
@@ -15,9 +17,9 @@ class MyUdacity extends Component{
                     <p>Не судите строго-- это мои первые шаги в сданной сфере.</p>
                 </div> 
                 <div id='sertificatesblock'>
-                    <div id='sert1' className='udasert'>
+                    <div id='sert1' className='udasert' style={{'width': this.props.status.width*0.132, 'height': this.props.status.width*0.1016}}>
                     </div>
-                    <div id='sert2' className='udasert'>
+                    <div id='sert2' className='udasert' style={{'width': this.props.status.width*0.132, 'height': this.props.status.width*0.1016}}>
                     </div>
                 </div>
             </div>
@@ -31,6 +33,4 @@ class MyUdacity extends Component{
         )
 }}
 
-
-
-export default (MyUdacity)
+export default withRouter(connect(state=>({status: state.status}))(MyUdacity))
