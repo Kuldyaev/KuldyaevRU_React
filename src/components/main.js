@@ -8,7 +8,8 @@ import MyUdacity from './udacity'
 import Text1 from './slider'
 import Fotos from './fotos'
 import Hobby from './hobby'
-
+ 
+ 
 const slideImages = [
   './img/slider/image2.jpg',
   './img/slider/image3.jpg',
