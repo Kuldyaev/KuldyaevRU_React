@@ -14,7 +14,7 @@ class MyUdacity extends Component{
                     <p>UDACITY</p>
                     <p>За время обучения мне удалось пройти несколько курсов и, самое главное, выполняя задания получить несколько готовых проектов </p>
                     <p>Привожу эти проекты здесь.</p>
-                    <p>Не судите строго-- это мои первые шаги в сданной сфере.</p>
+                    <p>Не судите строго-- это мои первые шаги в данной сфере.</p>
                 </div> 
                 <div id='sertificatesblock'>
                     <div id='sert1' className='udasert' style={{'width': this.props.status.width*0.132, 'height': this.props.status.width*0.1016}}>
@@ -26,8 +26,23 @@ class MyUdacity extends Component{
             <div id='centralblock'>
             </div>
             <div id='coursesBlock'>
+                <div className='udacourse'>
+                   <div className='udacourselogo' id='udacourse1'>
+                   </div>
+                </div>
+                <div className='udacourse'>
+                   <div className='udacourselogo' id='udacourse2'>
+                   </div>
+                </div>
+                <div className='udacourse'>
+                   <div className='udacourselogo' id='udacourse3'>
+                   </div>
+                </div>
+               <div className='udacourse'>
+                   <div className='udacourselogo' id='udacourse4'>
+                   </div>
+                </div>
             </div>  
-
         </div>
        
         )

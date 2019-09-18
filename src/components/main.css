@@ -115,6 +115,28 @@ h3 {
 #coursesBlock{
     height:100%;
     width: 33%;
-    background-color: yellow;
 }
-
+.udacourse{
+    height: 25%;
+    width: 100%;
+}
+.udacourselogo{
+    height: 90%;
+    width: 52%;
+    background-size: cover;
+    margin-left: 10%;
+    margin-top: 1%;
+    border-radius: 5%; 
+}
+#udacourse1{
+    background-image: url('./img/UdaWebDev.JPG');
+}
+#udacourse2{
+    background-image: url('./img/UdaReact.JPG');
+}
+#udacourse3{
+    background-image: url('./img/UdaFullStackWebDev.JPG');
+}
+#udacourse4{
+    background-image: url('./img/UdaDataScince.JPG');
+}
