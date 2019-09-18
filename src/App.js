@@ -8,6 +8,10 @@ import Main from './components/main'
 import NotFound from './components/notfound'
 import Footer from './components/footer'
 import Udacity1 from './components/udacity1'
+import UdacityCourse1 from './components/udaCourse1'
+import UdacityCourse2 from './components/udaCourse2'
+import UdacityCourse3 from './components/udaCourse3'
+import UdacityCourse4 from './components/udaCourse4'
 
 import {changeMeasuring} from './actions/status'
 
@@ -41,7 +45,10 @@ class  App  extends Component {
               <Switch>
                         <Route exact path='/' component = {Main}/>
                         <Route exact path='/udacity' component = {Udacity1}/>
-
+                        <Route exact path='/udacity/courses/1' component = {UdacityCourse1}/>
+                        <Route exact path='/udacity/courses/2' component = {UdacityCourse2}/>
+                        <Route exact path='/udacity/courses/3' component = {UdacityCourse3}/>
+                        <Route exact path='/udacity/courses/4' component = {UdacityCourse4}/>
                         <Route component={NotFound} />
               </Switch>
               <Footer/>

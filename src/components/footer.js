@@ -3,17 +3,19 @@ import Img from 'react-image'
 import './footer.css'
 
 
+const Logo1 = () => <Img src='./img/icons/odnoklassniki.svg' alt="Одноклассники" className="icon"/>
+const Logo2 = () => <Img src='./img/icons/facebook.svg' alt="Facebook" className="icon"/>
+const Logo3 = () => <Img src='./img/icons/social.svg' alt="В контакте" className="icon"/>
+const Logo4 = () => <Img src='./img/icons/linkedin.svg' alt="LinkedIn" className="icon"/>        
+const Logo5 = () => <Img src='./img/icons/twitter(1).svg'alt="Twitter" className="icon"/>
+const Logo6 = () => <Img src='./img/icons/instagram.svg' alt="Instagram" className="icon"/>  
+const Logo7 = () => <Img src='./img/icons/email.svg' alt="e-mail link" className="icon"/>
+const Logo8 = () => <Img src='./img/icons/skype.svg' alt="skype" className="icon"/>
+const Logo9 = () => <Img src='./img/icons/github.svg' alt="github" className="icon"/>
+
 class Footer extends Component{
     render(){
-        const Logo1 = () => <Img src='./img/icons/odnoklassniki.svg' alt="Одноклассники" className="icon"/>
-        const Logo2 = () => <Img src='./img/icons/facebook.svg' alt="Facebook" className="icon"/>
-        const Logo3 = () => <Img src='./img/icons/social.svg' alt="В контакте" className="icon"/>
-        const Logo4 = () => <Img src='./img/icons/linkedin.svg' alt="LinkedIn" className="icon"/>        
-        const Logo5 = () => <Img src='./img/icons/twitter(1).svg'alt="Twitter" className="icon"/>
-        const Logo6 = () => <Img src='./img/icons/instagram.svg' alt="Instagram" className="icon"/>  
-        const Logo7 = () => <Img src='./img/icons/email.svg' alt="e-mail link" className="icon"/>
-        const Logo8 = () => <Img src='./img/icons/skype.svg' alt="skype" className="icon"/>
-        const Logo9 = () => <Img src='./img/icons/github.svg' alt="github" className="icon"/>
+
         return(
         <div className='footer'>
             <div className="social">
