@@ -8,7 +8,7 @@ import MyUdacity from './udacity'
 import Text1 from './slider'
 import Fotos from './fotos'
 import Hobby from './hobby'
- 
+import Portfolio from './portfolio'
  
 const slideImages = [
   './img/slider/image2.jpg',
@@ -92,6 +92,7 @@ class Main extends Component{
                         </Slide>
                     </div>
                 </div>
+                <Portfolio/>
                 <MyUdacity/>
                 <Fotos/>
                 <Hobby/>
@@ -131,6 +132,7 @@ class Main extends Component{
                 </Slide>
             </div>
             <Text1/>
+            <Portfolio/>
             <MyUdacity/>
             <Fotos/>
             <Hobby/>

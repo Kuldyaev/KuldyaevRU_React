@@ -12,6 +12,8 @@ import UdacityCourse1 from './components/udaCourse1'
 import UdacityCourse2 from './components/udaCourse2'
 import UdacityCourse3 from './components/udaCourse3'
 import UdacityCourse4 from './components/udaCourse4'
+import PhotoGallery from './components/photogallery'
+import PhotoMap from './components/photomap'
 
 import {changeMeasuring} from './actions/status'
 
@@ -49,6 +51,8 @@ class  App  extends Component {
                         <Route exact path='/udacity/courses/2' component = {UdacityCourse2}/>
                         <Route exact path='/udacity/courses/3' component = {UdacityCourse3}/>
                         <Route exact path='/udacity/courses/4' component = {UdacityCourse4}/>
+                        <Route exact path='/udacity/photos/gallery' component = {PhotoGallery}/>
+                        <Route exact path='/udacity/photos/map' component = {PhotoMap}/>
                         <Route component={NotFound} />
               </Switch>
               <Footer/>
