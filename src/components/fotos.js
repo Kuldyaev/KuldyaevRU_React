@@ -19,7 +19,6 @@ class Fotos extends Component{
                 <Link className='logoPhoto' to='/udacity/photos/map'><LogoMapGallery/></Link>
             </div>    
         </div>
-       
         )
     }
 }
