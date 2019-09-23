@@ -22,7 +22,4 @@ class Fotos extends Component{
         )
     }
 }
-
-
-
 export default (Fotos)
