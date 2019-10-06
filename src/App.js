@@ -67,6 +67,5 @@ function mapStateToProps (store){
       status: store.status
     };
 }
-
 	
 export default withRouter(connect(mapStateToProps, {changeMeasuring})(App));
