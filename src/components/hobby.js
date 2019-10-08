@@ -10,10 +10,7 @@ class Hobby extends Component{
             <p>танки, книги, рецепты, собака</p>
            
         </div>
-       
-        )
+     )
 }}
-
-
 
 export default (Hobby)
