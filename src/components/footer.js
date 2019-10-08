@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Img from 'react-image'
 import './footer.css'
 
-
 const Logo1 = () => <Img src='./img/icons/odnoklassniki.svg' alt="Одноклассники" className="icon"/>
 const Logo2 = () => <Img src='./img/icons/facebook.svg' alt="Facebook" className="icon"/>
 const Logo3 = () => <Img src='./img/icons/social.svg' alt="В контакте" className="icon"/>
@@ -15,7 +14,6 @@ const Logo9 = () => <Img src='./img/icons/github.svg' alt="github" className="ic
 
 class Footer extends Component{
     render(){
-
         return(
         <div className='footer'>
             <div className="social">
@@ -25,23 +23,16 @@ class Footer extends Component{
                 <a href="https://vk.com/kuldyaev" title="Вконтакте"><Logo3/></a>
                 <a href="https://www.linkedin.com/in/viacheslav-kuldyaev-3b7a07a5" title="LinkedIn"><Logo4/></a>
                 <Logo5/>
-                 <a href="https://www.instagram.com/vyacheslavkuldyaev" title="Instagram"><Logo6/></a>
+                <a href="https://www.instagram.com/vyacheslavkuldyaev" title="Instagram"><Logo6/></a>
                 <Logo8/>
                 <a href="" title="E-MAIL"><Logo7/></a>
-	
-                
-            </div>
-
-
-            <div className="rights">
+	    </div>
+	    <div className="rights">
                 <h6>Все права защищены &copy;
                 <a href="http://slavalion.ru" title="SlavalionStudio">SlavalionStudio</a>  2019</h6>
             </div>
-        </div>
-       
-        )
+        </div>   
+    )
 }}
-
-
 
 export default (Footer)
