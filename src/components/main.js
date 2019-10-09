@@ -25,7 +25,6 @@ const properties = {
   arrows: true,
 }
 
-
 class Main extends Component{
     constructor(props){
 		super(props);
@@ -140,6 +139,5 @@ class Main extends Component{
         )
     }
 }}
-
 
 export default withRouter(connect(state=>({status: state.status}))(Main))
