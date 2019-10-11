@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-
 import './main.css'
-
-
 
 class Portfolio extends Component{
     render(){
@@ -12,14 +9,9 @@ class Portfolio extends Component{
             <p>В этом разделе будут ссылки на проекты, в которых я принимал участие. </p>
             <p>Старая версия сайта. </p>
             <p>Сайт дочери. </p>
-            <p>Проекты Udacity </p>
-        
-           
-        </div>
-       
-        )
+            <p>Проекты Udacity </p>           
+        </div>       
+       )
 }}
-
-
 
 export default (Portfolio)
