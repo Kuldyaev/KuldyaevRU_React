@@ -11,7 +11,7 @@ class Portfolio extends Component{
             <p>Сайт дочери. </p>
             <p>Проекты Udacity </p>           
         </div>       
-       )
+    )
 }}
 
 export default (Portfolio)
