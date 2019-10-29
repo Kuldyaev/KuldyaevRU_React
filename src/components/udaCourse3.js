@@ -9,12 +9,7 @@ class Udacity1 extends Component{
                 <h3> Udacity Course3</h3>
                 <p>   fjijf</p>
             </div> 
-
         </div>
-       
-        )
+    )
 }}
-
-
-
 export default (Udacity1)
