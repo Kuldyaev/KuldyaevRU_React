@@ -7,10 +7,8 @@ class Hobby extends Component{
         <div className='hobby'>
             <h3> Hobby блок</h3>
             <p>Ну тут ваааааще про все </p>
-            <p>танки, книги, рецепты, собака</p>
-           
+            <p>танки, книги, рецепты, собака</p>        
         </div>
      )
 }}
-
 export default (Hobby)
