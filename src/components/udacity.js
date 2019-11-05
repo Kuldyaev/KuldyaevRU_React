@@ -52,5 +52,4 @@ class MyUdacity extends Component{
         </div>
     )
 }}
-
 export default withRouter(connect(state=>({status: state.status}))(MyUdacity))
