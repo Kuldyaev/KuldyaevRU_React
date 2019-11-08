@@ -139,5 +139,4 @@ class Main extends Component{
         )
     }
 }}
-
 export default withRouter(connect(state=>({status: state.status}))(Main))
