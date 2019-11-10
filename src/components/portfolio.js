@@ -13,5 +13,4 @@ class Portfolio extends Component{
         </div>       
     )
 }}
-
 export default (Portfolio)
