@@ -7,14 +7,8 @@ class PhotoMap extends Component{
         <div className='udacity'>
             <div id="udacityTextBlock1">
                 <h3> Фото карта </h3>
-                
             </div> 
-
-        </div>
-       
-        )
+        </div>    
+   )
 }}
-
-
-
 export default (PhotoMap)
