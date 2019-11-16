@@ -4,8 +4,6 @@ import {Link, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import './main.css'
 
-
-
 class Text1 extends Component{
   render(){
     return (
@@ -27,9 +25,6 @@ class Text1 extends Component{
                 <p>Масштаб {String(this.props.status.scale)} тип {typeof(this.props.status.scale)} </p>
              </div>
     )
-    }  
+  }  
 }
-
-
-
 export default withRouter(connect(state=>({status: state.status}))(Text1))
