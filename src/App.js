@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
-
 import './App.css';
 import Header from './components/header'
 import Main from './components/main'
